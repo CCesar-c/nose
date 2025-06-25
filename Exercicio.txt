@@ -1,0 +1,71 @@
+				AULA-SENAI
+
+formulas (I = V / R | V = R . I | R = V / I)
+I = corrente(A)
+V = Tensão(V)
+R = Resistencia(Ω)
+exemplo 1 :
+V = 6v
+R = 120Ω
+I = ?
+120 / 6 = 0,05A ou 50mA;
+
+Exemplo 2:
+V = 9v
+I = 300mA = 0,3
+R = 30Ω
+
+30 = 9 / 0,3
+
+Exemplo 3:
+R = 22kΩ
+I = 100mA 
+V = 2200V 
+2200V = 0,1A . 22000Ω
+
+Exemplo 4:
+a)Qual a equaçao da lei do ohm?
+{
+	R = "I = V / R | V = R . I | R = V / I"
+}
+
+b) De as equaçoes e as unidades de medida para corrente, tensao, e resistencia eletrica, segun a lei do OHM..!!
+{
+	R = "v, A, Ω"
+}
+3.a
+V = 5V
+R = 330Ω
+I = 0,015A = 5v / 330Ω
+
+3.b
+v =30v
+r = 150 Ω
+i = 0,2 A
+
+3.c
+v = 18V = 1200 . 0,015
+r = 1,2kΩ(1200)
+i = 15mA(0,015A)
+3.d
+v = 60v = 200 . 0,3
+r = 200Ω
+i = 300mA(0,3)
+
+3.e
+v = 12v
+r = 9600Ω = 12/ 0,00125
+i= 1250µA(0,00125)
+
+3.f
+v= 60v
+r = 680Ω
+i = 0.08A = 60v / 680Ω
+
+				POTENCIA ELETRICA
+
+w = watt
+formula (P(w) = v . i| I = p / v | V = p / i)
+
+V = R . I
+P = V .I
