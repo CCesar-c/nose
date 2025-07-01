@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .activar {
+            transition: 1s;
+            opacity: 1;
+        }
+
+        .desactivar {
+            transition: 1s;
+            opacity: 0;
+        }
+
+        #descripcao {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        input {
+
+            margin-top: 10px;
+            outline: none;
+            padding: 10px 5px;
+        }
+
+        form {
+            text-align: center;
+            padding: 200px 100px;
+            background-color: rgb(203, 229, 252);
+            outline: 2px solid rgba(0, 0, 0, 0.4);
+            outline-offset: 1px;
+            border-radius: 25px;
+        }
+
+        body {
+            background: linear-gradient(130deg, white, black);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <p id="descripcao" class="desactivar"></p>
+        <h1>Calcular</h1>
+
+        <input type="text"  placeholder="1° numero" id="input1">
+        <br>
+        <input type="text" placeholder="2° numero" id="input2">
+    </form>
+
+    <script>
+        open("tesxto.txt", "txt", "nao sei ")
+        var pe = document.getElementById("descripcao")
+        var res;
+
+        setInterval(() => {
+            document.querySelector("form").addEventListener('mousemove', function (e) {
+                pe.classList.remove("desactivar")
+                pe.classList.add("activar")
+                pe.style.left = e.pageX + "px";
+                pe.style.top = e.pageY + "px";
+            });
+
+            document.querySelector("form").addEventListener("mouseout", () => {
+                pe.classList.remove("activar")
+                pe.classList.add("desactivar")
+            });
+
+            var input_1 = parseFloat(document.getElementById("input1").value);
+            var input_2 = parseFloat(document.getElementById("input2").value);
+            pe.innerText = "Resultados \n" + "+ " + (input_1 + input_2 + "\n") + "- " + (input_1 - input_2 + "\n") + "* " + (input_1 * input_2 + "\n") + "/ " + (input_1 / input_2 + "\n");
+
+        }, 1000);
+    </script>
+</body>
+
+</html>
