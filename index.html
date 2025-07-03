@@ -7,13 +7,29 @@
     <title>Document</title>
     <style>
         * {
-            margin: 0;
+
+            border-radius: 10px;
+            margin-top: 10px;
             padding: 0;
+            padding: 10px 5px;
         }
 
         .activar {
             transition: 1s;
             opacity: 1;
+        }
+        .cor{
+            transition: 1s;
+            background-color: white;
+        }
+        .add-black{
+            transition: 1s;
+            background-color: black;
+        }
+
+        .add-white{
+            transition: 1s;
+            background-color: white;
         }
 
         .desactivar {
@@ -26,25 +42,31 @@
             pointer-events: none;
         }
 
-        input {
-
-            margin-top: 10px;
+        #input1{
+            width: 200px;
+            height: 40px;
             outline: none;
-            padding: 10px 5px;
         }
-
+        #input2{
+            width: 200px;
+            height: 40px;
+            outline: none;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+        }
         form {
             text-align: center;
-            padding: 200px 100px;
+            padding: 100px 100px;
+            /*
             background-color: rgb(203, 229, 252);
             outline: 2px solid rgba(0, 0, 0, 0.4);
-            outline-offset: 1px;
-            border-radius: 25px;
+            outline-offset: 1px;*/
         }
 
         body {
-            background: linear-gradient(130deg, white, black);
-            height: 100vh;
+            height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,38 +76,37 @@
 </head>
 
 <body>
-    <form>
-        <p id="descripcao" class="desactivar"></p>
-        <h1>Calcular</h1>
 
-        <input type="text"  placeholder="1° numero" id="input1">
+    <form>
+        <h1>Instragam</h1>
+        <input type="text" placeholder="Usuario" id="input1">
         <br>
-        <input type="text" placeholder="2° numero" id="input2">
+        <input type="text" placeholder="senha" id="input2">
+        <br>
+        <input type="checkbox" title="Change background Color" class="check" >Cambiar de Color         
+        <br>
+        <button type="button">Entrar</button>
     </form>
 
     <script>
-        open("tesxto.txt", "txt", "nao sei ")
-        var pe = document.getElementById("descripcao")
-        var res;
-
+        var gus = Boolean();
         setInterval(() => {
-            document.querySelector("form").addEventListener('mousemove', function (e) {
-                pe.classList.remove("desactivar")
-                pe.classList.add("activar")
-                pe.style.left = e.pageX + "px";
-                pe.style.top = e.pageY + "px";
-            });
-
-            document.querySelector("form").addEventListener("mouseout", () => {
-                pe.classList.remove("activar")
-                pe.classList.add("desactivar")
-            });
-
             var input_1 = parseFloat(document.getElementById("input1").value);
             var input_2 = parseFloat(document.getElementById("input2").value);
-            pe.innerText = "Resultados \n" + "+ " + (input_1 + input_2 + "\n") + "- " + (input_1 - input_2 + "\n") + "* " + (input_1 * input_2 + "\n") + "/ " + (input_1 / input_2 + "\n");
-
         }, 1000);
+        document.querySelector(".check").addEventListener("click", () => {
+            gus = !gus;
+            //alert(gus)
+            if (gus == true) {
+                document.body.classList.remove("add-white")
+                document.body.classList.add("add-black")
+                document.querySelector("form").classList.add("cor");
+            } else {
+                document.body.classList.remove("add-black")
+                document.body.classList.add("add-white")
+                document.querySelector("form").classList.remove("cor");
+            }
+        })
     </script>
 </body>
 
