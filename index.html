@@ -5,84 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-
-            border-radius: 10px;
-            margin-top: 10px;
-            padding: 0;
-            padding: 10px 5px;
-        }
-
-        .activar {
-            transition: 1s;
-            opacity: 1;
-        }
-
-        .cor {
-            transition: 1s;
-            background-color: white;
-        }
-
-        .add-black {
-            transition: 1s;
-            background-color: black;
-        }
-
-        .add-white {
-            transition: 1s;
-            background-color: white;
-        }
-
-        .desactivar {
-            transition: 1s;
-            opacity: 0;
-        }
-
-        #descripcao {
-            position: absolute;
-            pointer-events: none;
-        }
-
-        #input1 {
-            width: 200px;
-            height: 40px;
-            outline: none;
-        }
-
-        #input2 {
-            width: 200px;
-            height: 40px;
-            outline: none;
-        }
-
-        button {
-            width: 200px;
-            height: 50px;
-        }
-
-        form {
-            text-align: center;
-            padding: 100px 100px;
-            /*
-            background-color: rgb(203, 229, 252);
-            outline: 2px solid rgba(0, 0, 0, 0.4);
-            outline-offset: 1px;*/
-        }
-
-        body {
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="add-normal">
 
-    <form>
+    <form class="sin">
         <h1>Instragam</h1>
         <input type="text" placeholder="Usuario" id="input1">
         <br>
